@@ -1,0 +1,15 @@
+
+h1{
+  color: darkblue;
+  text-align: left;
+  font-family: "Comic Sans", "Arial", "Verdana"
+  }
+div{
+text-align: left;
+background-color: whitesmoke;
+height: 500px;
+width: 500px;
+border-style: solid;
+border-color: black;
+padding:10px;
+}

@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Homework Week3_JavaScript Assignment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+  </head>
+  
+  <body>
+     <section>
+     <h1>The Psychic Game</h1>
+      <div id="Psychic_Game">
+        <h4>Guess what letter I'm thinking of:</h4>
+          <p>Press any letter to start playing!</p>
+      </div>
+    
+    <script type="text/javascript">
+    // Creates an array that lists computer choices.
+    var computerChoices = [];
+
+    // Creating variables to hold the number of wins, left and guesses.
+    var wins = 0;
+    var losses = 0;
+    var left = 0;
+    var your_guesses = 0;
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+    // Determines which key was pressed.
+    var userGuess = event.key;
+
+    // Randomly chooses a choice from the options array. This is the Computer's guess.
+  function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+  }
+
+  console.log(makeid());
+
+      // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
+      var html =
+          "<p>You chose: " + your_guesses + "</p>" +
+          "<p>The computer chose: " + computerChoices + "</p>" +
+          "<p>wins: " + Wins + "</p>" +
+          "<p>losses: " + Losses + "</p>" +
+          "<p>ties: " + ties + "</p>";
+
+        // Set the inner HTML contents of the #game div to our html string
+        document.querySelector("#Psychic_Game").innerHTML = html;
+      };
+   
+      </script>
+     </section>  
+  </body>
+</html>
 
